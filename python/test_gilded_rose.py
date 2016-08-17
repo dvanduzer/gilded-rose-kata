@@ -52,6 +52,25 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEquals(80, items[0].quality)
 
+    def test_backstage(self):
+        items = [Item("Backstage passes to a TAFKAL80ETC concert", 11, 10),
+                 Item("Backstage passes to a TAFKAL80ETC concert", 6, 10),
+                 Item("Backstage passes to a TAFKAL80ETC concert", 2, 10)
+        ]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEquals(11, items[0].quality)
+        self.assertEquals(12, items[1].quality)
+        self.assertEquals(13, items[2].quality)
+        gilded_rose.update_quality()
+        self.assertEquals(13, items[0].quality)
+        self.assertEquals(15, items[1].quality)
+        self.assertEquals(16, items[2].quality)
+        gilded_rose.update_quality()
+        self.assertEquals(15, items[0].quality)
+        self.assertEquals(18, items[1].quality)
+        self.assertEquals(0, items[2].quality)
+
 
 if __name__ == '__main__':
     unittest.main()
