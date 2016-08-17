@@ -32,6 +32,10 @@ class GildedRose(object):
                         if item.quality > 0:
                             if item.name != "Sulfuras, Hand of Ragnaros":
                                 item.quality = item.quality - 1
+                            if item.name == "Conjured Gouda":
+                                #just decrement a second time
+                                #thanks leeroy
+                                item.quality = item.quality - 1
                     else:
                         item.quality = item.quality - item.quality
                 else:
