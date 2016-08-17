@@ -3,3 +3,6 @@
 * can Conjured Aged Brie exist?
 * should Aged Brie's quality really be doubling after sell-by?
 
+This really does need a complete overhaul, with the concept of positive
+and negative rates of degradation. I'll put it on the backlog for the next
+scrum.
