@@ -1,0 +1,3 @@
+* string matching for identifying inventory, hmm
+* need clarity on business logic of "quality is never more than 50"
+* can Conjured Aged Brie exist?
