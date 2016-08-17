@@ -71,6 +71,13 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEquals(18, items[1].quality)
         self.assertEquals(0, items[2].quality)
 
+    def test_conjuring(self):
+        items = [Item("Conjured Gouda", 1, 8)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEquals(6, items[0].quality)
+        gilded_rose.update_quality()
+        self.assertEquals(2, items[0].quality)
 
 if __name__ == '__main__':
     unittest.main()
