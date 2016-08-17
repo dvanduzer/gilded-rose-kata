@@ -26,5 +26,14 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEquals(0, items[0].quality)
         self.assertEquals(-2, items[0].sell_in)
 
+    def test_not_negative(self):
+        items = [Item("Limited Liability", 3, 1)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEquals(0, items[0].quality)
+        gilded_rose.update_quality()
+        self.assertEquals(0, items[0].quality)
+
+
 if __name__ == '__main__':
     unittest.main()
